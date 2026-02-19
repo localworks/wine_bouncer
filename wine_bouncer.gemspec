@@ -1,33 +1,37 @@
-lib = File.expand_path('lib', __dir__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'wine_bouncer/version'
+# -*- encoding: utf-8 -*-
+# stub: wine_bouncer 1.0.4 ruby lib
 
-Gem::Specification.new do |spec|
-  spec.name          = 'wine_bouncer'
-  spec.version       = WineBouncer::VERSION
-  spec.authors       = ['Antek Drzewiecki']
-  spec.email         = ['a.drzewiecki@devsquare.nl']
-  spec.summary       = %q{A Ruby gem that allows Oauth2 protection with Doorkeeper for Grape Api's}
-  spec.homepage      = 'https://github.com/antek-drzewiecki/wine_bouncer'
-  spec.license       = 'MIT'
+Gem::Specification.new do |s|
+  s.name = "wine_bouncer".freeze
+  s.version = "1.0.4".freeze
 
-  spec.files         = `git ls-files -z`.split("\x0")
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
-  spec.require_paths = ['lib']
+  s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
+  s.require_paths = ["lib".freeze]
+  s.authors = ["Antek Drzewiecki".freeze]
+  s.date = "2026-01-13"
+  s.email = ["a.drzewiecki@devsquare.nl".freeze]
+  s.files = [".gitignore".freeze, ".rspec".freeze, ".rubocop.yml".freeze, ".rubocop_todo.yml".freeze, ".travis.yml".freeze, "CHANGELOG.md".freeze, "CONTRIBUTING.md".freeze, "Gemfile".freeze, "LICENSE.txt".freeze, "README.md".freeze, "Rakefile".freeze, "UPGRADING.md".freeze, "lib/generators/templates/wine_bouncer.rb".freeze, "lib/generators/wine_bouncer/initializer_generator.rb".freeze, "lib/wine_bouncer.rb".freeze, "lib/wine_bouncer/auth_methods/auth_methods.rb".freeze, "lib/wine_bouncer/auth_strategies/default.rb".freeze, "lib/wine_bouncer/auth_strategies/protected.rb".freeze, "lib/wine_bouncer/auth_strategies/swagger.rb".freeze, "lib/wine_bouncer/base_strategy.rb".freeze, "lib/wine_bouncer/configuration.rb".freeze, "lib/wine_bouncer/errors.rb".freeze, "lib/wine_bouncer/extension.rb".freeze, "lib/wine_bouncer/oauth2.rb".freeze, "lib/wine_bouncer/version.rb".freeze, "spec/dummy/README.rdoc".freeze, "spec/dummy/Rakefile".freeze, "spec/dummy/app/api/default_api.rb".freeze, "spec/dummy/app/api/protected_api.rb".freeze, "spec/dummy/app/api/swagger_api.rb".freeze, "spec/dummy/app/assets/config/manifest.js".freeze, "spec/dummy/app/assets/images/.keep".freeze, "spec/dummy/app/assets/javascripts/application.js".freeze, "spec/dummy/app/assets/stylesheets/application.css".freeze, "spec/dummy/app/controllers/application_controller.rb".freeze, "spec/dummy/app/controllers/concerns/.keep".freeze, "spec/dummy/app/helpers/application_helper.rb".freeze, "spec/dummy/app/mailers/.keep".freeze, "spec/dummy/app/models/.keep".freeze, "spec/dummy/app/models/concerns/.keep".freeze, "spec/dummy/app/models/user.rb".freeze, "spec/dummy/app/views/layouts/application.html.erb".freeze, "spec/dummy/bin/bundle".freeze, "spec/dummy/bin/rails".freeze, "spec/dummy/bin/rake".freeze, "spec/dummy/config.ru".freeze, "spec/dummy/config/application.rb".freeze, "spec/dummy/config/boot.rb".freeze, "spec/dummy/config/database.yml".freeze, "spec/dummy/config/environment.rb".freeze, "spec/dummy/config/environments/development.rb".freeze, "spec/dummy/config/environments/production.rb".freeze, "spec/dummy/config/environments/test.rb".freeze, "spec/dummy/config/initializers/assets.rb".freeze, "spec/dummy/config/initializers/backtrace_silencers.rb".freeze, "spec/dummy/config/initializers/cookies_serializer.rb".freeze, "spec/dummy/config/initializers/doorkeeper.rb".freeze, "spec/dummy/config/initializers/filter_parameter_logging.rb".freeze, "spec/dummy/config/initializers/inflections.rb".freeze, "spec/dummy/config/initializers/mime_types.rb".freeze, "spec/dummy/config/initializers/secret_token.rb".freeze, "spec/dummy/config/initializers/session_store.rb".freeze, "spec/dummy/config/initializers/wrap_parameters.rb".freeze, "spec/dummy/config/locales/doorkeeper.en.yml".freeze, "spec/dummy/config/locales/en.yml".freeze, "spec/dummy/config/routes.rb".freeze, "spec/dummy/config/secrets.yml".freeze, "spec/dummy/db/migrate/20140915153344_create_users.rb".freeze, "spec/dummy/db/migrate/20140915160601_create_doorkeeper_tables.rb".freeze, "spec/dummy/db/schema.rb".freeze, "spec/dummy/lib/assets/.keep".freeze, "spec/dummy/log/.keep".freeze, "spec/dummy/public/404.html".freeze, "spec/dummy/public/422.html".freeze, "spec/dummy/public/500.html".freeze, "spec/dummy/public/favicon.ico".freeze, "spec/factories/access_token.rb".freeze, "spec/factories/application.rb".freeze, "spec/factories/user.rb".freeze, "spec/intergration/oauth2_default_strategy_spec.rb".freeze, "spec/intergration/oauth2_protected_strategy_spec.rb".freeze, "spec/intergration/oauth2_swagger_strategy_spec.rb".freeze, "spec/lib/generators/wine_bouncer/initializer_generator_spec.rb".freeze, "spec/lib/wine_bouncer/auth_methods/auth_methods_spec.rb".freeze, "spec/lib/wine_bouncer/auth_strategies/default_spec.rb".freeze, "spec/lib/wine_bouncer/auth_strategies/swagger_spec.rb".freeze, "spec/rails_helper.rb".freeze, "spec/shared/orm/active_record.rb".freeze, "spec/spec_helper.rb".freeze, "wine_bouncer.gemspec".freeze]
+  s.homepage = "https://github.com/antek-drzewiecki/wine_bouncer".freeze
+  s.licenses = ["MIT".freeze]
+  s.rubygems_version = "3.6.2".freeze
+  s.summary = "A Ruby gem that allows Oauth2 protection with Doorkeeper for Grape Api's".freeze
+  s.test_files = ["spec/dummy/README.rdoc".freeze, "spec/dummy/Rakefile".freeze, "spec/dummy/app/api/default_api.rb".freeze, "spec/dummy/app/api/protected_api.rb".freeze, "spec/dummy/app/api/swagger_api.rb".freeze, "spec/dummy/app/assets/config/manifest.js".freeze, "spec/dummy/app/assets/images/.keep".freeze, "spec/dummy/app/assets/javascripts/application.js".freeze, "spec/dummy/app/assets/stylesheets/application.css".freeze, "spec/dummy/app/controllers/application_controller.rb".freeze, "spec/dummy/app/controllers/concerns/.keep".freeze, "spec/dummy/app/helpers/application_helper.rb".freeze, "spec/dummy/app/mailers/.keep".freeze, "spec/dummy/app/models/.keep".freeze, "spec/dummy/app/models/concerns/.keep".freeze, "spec/dummy/app/models/user.rb".freeze, "spec/dummy/app/views/layouts/application.html.erb".freeze, "spec/dummy/bin/bundle".freeze, "spec/dummy/bin/rails".freeze, "spec/dummy/bin/rake".freeze, "spec/dummy/config.ru".freeze, "spec/dummy/config/application.rb".freeze, "spec/dummy/config/boot.rb".freeze, "spec/dummy/config/database.yml".freeze, "spec/dummy/config/environment.rb".freeze, "spec/dummy/config/environments/development.rb".freeze, "spec/dummy/config/environments/production.rb".freeze, "spec/dummy/config/environments/test.rb".freeze, "spec/dummy/config/initializers/assets.rb".freeze, "spec/dummy/config/initializers/backtrace_silencers.rb".freeze, "spec/dummy/config/initializers/cookies_serializer.rb".freeze, "spec/dummy/config/initializers/doorkeeper.rb".freeze, "spec/dummy/config/initializers/filter_parameter_logging.rb".freeze, "spec/dummy/config/initializers/inflections.rb".freeze, "spec/dummy/config/initializers/mime_types.rb".freeze, "spec/dummy/config/initializers/secret_token.rb".freeze, "spec/dummy/config/initializers/session_store.rb".freeze, "spec/dummy/config/initializers/wrap_parameters.rb".freeze, "spec/dummy/config/locales/doorkeeper.en.yml".freeze, "spec/dummy/config/locales/en.yml".freeze, "spec/dummy/config/routes.rb".freeze, "spec/dummy/config/secrets.yml".freeze, "spec/dummy/db/migrate/20140915153344_create_users.rb".freeze, "spec/dummy/db/migrate/20140915160601_create_doorkeeper_tables.rb".freeze, "spec/dummy/db/schema.rb".freeze, "spec/dummy/lib/assets/.keep".freeze, "spec/dummy/log/.keep".freeze, "spec/dummy/public/404.html".freeze, "spec/dummy/public/422.html".freeze, "spec/dummy/public/500.html".freeze, "spec/dummy/public/favicon.ico".freeze, "spec/factories/access_token.rb".freeze, "spec/factories/application.rb".freeze, "spec/factories/user.rb".freeze, "spec/intergration/oauth2_default_strategy_spec.rb".freeze, "spec/intergration/oauth2_protected_strategy_spec.rb".freeze, "spec/intergration/oauth2_swagger_strategy_spec.rb".freeze, "spec/lib/generators/wine_bouncer/initializer_generator_spec.rb".freeze, "spec/lib/wine_bouncer/auth_methods/auth_methods_spec.rb".freeze, "spec/lib/wine_bouncer/auth_strategies/default_spec.rb".freeze, "spec/lib/wine_bouncer/auth_strategies/swagger_spec.rb".freeze, "spec/rails_helper.rb".freeze, "spec/shared/orm/active_record.rb".freeze, "spec/spec_helper.rb".freeze]
 
-  spec.add_runtime_dependency 'grape', '>= 0.10'
-  spec.add_runtime_dependency 'doorkeeper', '>= 1.4', '< 6.0'
+  s.installed_by_version = "3.6.2".freeze
 
-  spec.add_development_dependency 'railties'
-  spec.add_development_dependency 'bundler'
-  spec.add_development_dependency 'rake', '~> 11.0'
-  spec.add_development_dependency 'rspec-rails', '~> 3.5.0'
-  spec.add_development_dependency 'factory_bot', '~> 4.8'
-  spec.add_development_dependency 'generator_spec', '~> 0.9.0'
-  spec.add_development_dependency 'sqlite3'
-  spec.add_development_dependency 'database_cleaner', '~> 1.6'
-  spec.add_development_dependency 'rubocop', '0.58.2'
-  spec.add_development_dependency 'yard', '~> 0.9.16'
-  spec.add_development_dependency 'simplecov'
+  s.specification_version = 4
+
+  s.add_runtime_dependency(%q<grape>.freeze, [">= 0.10".freeze])
+  s.add_runtime_dependency(%q<doorkeeper>.freeze, [">= 1.4".freeze, "< 6.0".freeze])
+  s.add_development_dependency(%q<railties>.freeze, [">= 0".freeze])
+  s.add_development_dependency(%q<bundler>.freeze, [">= 0".freeze])
+  s.add_development_dependency(%q<rake>.freeze, ["~> 11.0".freeze])
+  s.add_development_dependency(%q<rspec-rails>.freeze, ["~> 3.5.0".freeze])
+  s.add_development_dependency(%q<factory_bot>.freeze, ["~> 4.8".freeze])
+  s.add_development_dependency(%q<generator_spec>.freeze, ["~> 0.9.0".freeze])
+  s.add_development_dependency(%q<sqlite3>.freeze, [">= 0".freeze])
+  s.add_development_dependency(%q<database_cleaner>.freeze, ["~> 1.6".freeze])
+  s.add_development_dependency(%q<rubocop>.freeze, ["= 0.58.2".freeze])
+  s.add_development_dependency(%q<yard>.freeze, ["~> 0.9.16".freeze])
+  s.add_development_dependency(%q<simplecov>.freeze, [">= 0".freeze])
 end
